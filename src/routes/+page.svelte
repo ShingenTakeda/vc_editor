@@ -1,12 +1,11 @@
 <!--Login page-->
 <script>
+  import { badUser, userStore } from "./worstDB";
+  import { goto } from "$app/navigation";
   import ada_icon1 from "$lib/assets/ada_transparent.png"
-  import "./worstDB"
   //TODO: Check out on how to use stores
-  // import {goto} from '$app/navigation'
-	// import { badUser } from "./worstDB";
-  // let user = ""
-  // let password = ""
+  let user = ""
+  let password = ""
 </script>
 
 
@@ -24,11 +23,13 @@
               <form class="space-y-4 md:space-y-6" action="#">
                   <div>
                       <label for="user" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Usuario</label>
-                      <input type="text" name="user" id="user" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nome" required>
+                      <input type="text" name="user" id="user" bind:value={user}
+                      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nome" required>
                   </div>
                   <div>
                       <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Senha</label>
-                      <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                      <input type="password" name="password" id="password" placeholder="••••••••" bind:value={password}
+                      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                   </div>
                   <div class="flex items-center justify-between">
                       <div class="flex items-start">
@@ -41,7 +42,19 @@
                       </div>
                       <div class="text-sm text-gray-100 font-medium text-primary-600 hover:underline dark:text-primary-500">TRE-CE</div>
                   </div>
-                  <button type="submit" class="w-full bg-lime-600 text-white bg-primary-100 hover:bg-primary-100 focus:ring-4 focus:outline-none focus:ring-primary-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-900 dark:hover:bg-primary-900 dark:focus:ring-primary-900">Entrar</button>
+                  <button type="submit" on:click|preventDefault={()=>
+                  {
+                    console.log("User: " + user + " | Password: " + password)
+                    if(user == badUser.user && password == badUser.password)
+                    {
+                      goto("/admin")
+                    }
+                    else
+                    {
+                      console.log("ERROR!")
+                    }
+                  }}
+                  class="w-full bg-lime-600 text-white bg-primary-100 hover:bg-primary-100 focus:ring-4 focus:outline-none focus:ring-primary-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-900 dark:hover:bg-primary-900 dark:focus:ring-primary-900">Entrar</button>
               </form>
           </div>
       </div>
