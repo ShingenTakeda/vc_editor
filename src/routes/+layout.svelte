@@ -1,21 +1,11 @@
 <script>
-    import "../app.postcss"
+    import "../app.css"
 </script>
 
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  
-  <style lang="postcss">
-    :global(html) {
-      background-color: theme(colors.gray.100);
+<style lang="postcss">
+  :global(html) {
+    background-color: theme(colors.gray.700);
     }
-  </style>
-
-<nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/settings">Settings</a>
-</nav>
+</style>
 
 <slot></slot>

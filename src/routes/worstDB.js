@@ -1,0 +1,1 @@
+export const badUser = {user: "admin", password: "admin"}
