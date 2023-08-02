@@ -1,6 +1,9 @@
 <!--Login page-->
 <script>
-  import { badUser, userStore } from "./worstDB";
+
+  import { DarkMode } from 'flowbite-svelte';
+
+  import { badUser } from "./worstDB";
   import { goto } from "$app/navigation";
   import ada_icon1 from "$lib/assets/ada_transparent.png"
   //TODO: Check out on how to use stores
@@ -8,6 +11,7 @@
   let password = ""
 </script>
 
+<DarkMode />
 
 <section class="bg-gray-50 dark:bg-gray-900">
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -42,8 +46,11 @@
                       </div>
                       <div class="text-sm text-gray-100 font-medium text-primary-600 hover:underline dark:text-primary-500">TRE-CE</div>
                   </div>
-                  <button type="submit" on:click|preventDefault={()=>
+                  <button type="submit"
+           
+                  on:click|preventDefault={()=>
                   {
+                    //Limit the attempts
                     console.log("User: " + user + " | Password: " + password)
                     if(user == badUser.user && password == badUser.password)
                     {
@@ -54,6 +61,7 @@
                       console.log("ERROR!")
                     }
                   }}
+
                   class="w-full bg-lime-600 text-white bg-primary-100 hover:bg-primary-100 focus:ring-4 focus:outline-none focus:ring-primary-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-900 dark:hover:bg-primary-900 dark:focus:ring-primary-900">Entrar</button>
               </form>
           </div>

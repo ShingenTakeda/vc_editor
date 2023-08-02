@@ -1,3 +1,10 @@
 <!-- Admin page -->
-<script></script>
-<p>Hello from a another route!!!!</p>
+<script>
+	import Menu from "../Menu.svelte";
+    import { DarkMode } from "flowbite-svelte";
+	import Intent from "./Intent.svelte";
+</script>
+
+<Menu/>
+<DarkMode/>
+<Intent/>
