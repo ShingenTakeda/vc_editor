@@ -28,8 +28,8 @@ import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button, Input } from 'flo
     <NavHamburger on:click={toggle} />
   </div>
   <NavUl {hidden}>
-    <NavLi href="/" active={true}>Home</NavLi>
-    <NavLi href="/about">About</NavLi>
-    <NavLi href="/services">Services</NavLi>
+    <NavLi href="/" active={true} color="red">Sair</NavLi>
+    <NavLi href="/about">Sobre</NavLi>
+    <NavLi href="/services">Serviços</NavLi>
   </NavUl>
 </Navbar>
