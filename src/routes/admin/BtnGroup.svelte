@@ -4,17 +4,16 @@
 
     function changeEditState()
     {
-      showEdit.update((n)=> !n)
+      showEdit.update((n) => n = !n)
     }
 
     function changeDeleteState()
     {
-      showDelete.update((n) => !n)
-      
+      showDelete.update((n) => n = !n)
     }
 </script>
 
-<ButtonGroup showEdit={showEdit} showDelete={showDelete}>
+<ButtonGroup>
     
     <Button on:click={changeEditState}>
 

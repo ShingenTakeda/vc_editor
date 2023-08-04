@@ -1,6 +1,6 @@
 <script>
     import { Footer, FooterLinkGroup, FooterLink, FooterIcon, FooterCopyright } from 'flowbite-svelte'
-  </script>
+</script>
   
   <Footer footerType="sitemap">
     <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
