@@ -1,13 +1,11 @@
 <script>
-    import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox} from 'flowbite-svelte';
-	  import BtnGroup from './BtnGroup.svelte';
-    export let showEdit = false;
-    export let showDelete = false;
-  </script>
+  import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox} from 'flowbite-svelte';
+	import BtnGroup from './BtnGroup.svelte';
+</script>
   
-  <Table showEdit={showEdit} showDelete={showDelete}>
-    <TableHead>
-      <TableHeadCell class="!p-4">
+<Table>
+  <TableHead>
+    <TableHeadCell class="!p-4">
        
       </TableHeadCell>
       
@@ -23,11 +21,11 @@
       <TableHeadCell>Estado da intent</TableHeadCell>
       <TableHeadCell>Açoes</TableHeadCell>
     </TableHead>
-    <TableBody>
-      <TableBodyRow>
-        <TableBodyCell class="!p-4">
-          <Checkbox />
-        </TableBodyCell>
+  <TableBody>
+    <TableBodyRow>
+      <TableBodyCell class="!p-4">
+        <Checkbox />
+      </TableBodyCell>
         <TableBodyCell>Apple MacBook Pro 17"</TableBodyCell>
 
         <TableBodyCell></TableBodyCell>
@@ -42,8 +40,8 @@
         <TableBodyCell>3.0 lb.</TableBodyCell>
         <TableBodyCell>
           <!--Add BtnGroup dynamically-->
-          <BtnGroup showEdit={showEdit} showDelete={showDelete}></BtnGroup>
+          <BtnGroup></BtnGroup>
         </TableBodyCell>
       </TableBodyRow>
-    </TableBody>
-  </Table>
+  </TableBody>
+</Table>
