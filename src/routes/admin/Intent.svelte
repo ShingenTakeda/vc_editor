@@ -1,22 +1,27 @@
 <script>
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox} from 'flowbite-svelte';
-	import BtnGroup from './BtnGroup.svelte';
+	  import BtnGroup from './BtnGroup.svelte';
+    export let showEdit = false;
+    export let showDelete = false;
   </script>
   
-  <Table>
+  <Table showEdit={showEdit} showDelete={showDelete}>
     <TableHead>
       <TableHeadCell class="!p-4">
        
       </TableHeadCell>
       
-      <TableHeadCell>Product name</TableHeadCell>
-      <TableHeadCell>Color</TableHeadCell>
-      <TableHeadCell>Category</TableHeadCell>
-      <TableHeadCell>ACCESSORIES</TableHeadCell>
-      <TableHeadCell>AVAILABLE</TableHeadCell>
-      <TableHeadCell>Price</TableHeadCell>
-      <TableHeadCell>WEIGHT</TableHeadCell>
-      <TableHeadCell>ACTION</TableHeadCell>
+      <TableHeadCell>Nome da intent</TableHeadCell>
+      <TableBodyCell></TableBodyCell>
+      <TableBodyCell></TableBodyCell>
+      <TableBodyCell></TableBodyCell>
+      <TableBodyCell></TableBodyCell>
+      <TableBodyCell></TableBodyCell>
+      <TableBodyCell></TableBodyCell>
+      <TableBodyCell></TableBodyCell>
+      <TableBodyCell></TableBodyCell>
+      <TableHeadCell>Estado da intent</TableHeadCell>
+      <TableHeadCell>Açoes</TableHeadCell>
     </TableHead>
     <TableBody>
       <TableBodyRow>
@@ -24,56 +29,21 @@
           <Checkbox />
         </TableBodyCell>
         <TableBodyCell>Apple MacBook Pro 17"</TableBodyCell>
-        <TableBodyCell>Sliver</TableBodyCell>
-        <TableBodyCell>Laptop</TableBodyCell>
-        <TableBodyCell>Yes</TableBodyCell>
-        <TableBodyCell>Yes</TableBodyCell>
-        <TableBodyCell>$2999</TableBodyCell>
+
+        <TableBodyCell></TableBodyCell>
+        <TableBodyCell></TableBodyCell>
+        <TableBodyCell></TableBodyCell>
+        <TableBodyCell></TableBodyCell>
+        <TableBodyCell></TableBodyCell>
+        <TableBodyCell></TableBodyCell>
+        <TableBodyCell></TableBodyCell>
+        <TableBodyCell></TableBodyCell>
+
         <TableBodyCell>3.0 lb.</TableBodyCell>
         <TableBodyCell>
           <!--Add BtnGroup dynamically-->
-          <BtnGroup></BtnGroup>
+          <BtnGroup showEdit={showEdit} showDelete={showDelete}></BtnGroup>
         </TableBodyCell>
-      </TableBodyRow>
-      <TableBodyRow>
-        <TableBodyCell class="!p-4">
-          <Checkbox />
-        </TableBodyCell>
-        <TableBodyCell>Microsoft Surface Pro</TableBodyCell>
-        <TableBodyCell>White</TableBodyCell>
-        <TableBodyCell>Laptop PC</TableBodyCell>
-        <TableBodyCell>No</TableBodyCell>
-        <TableBodyCell>Yes</TableBodyCell>
-        <TableBodyCell>$1999</TableBodyCell>
-        <TableBodyCell>1.0 lb.</TableBodyCell>
-        <TableBodyCell
-          ><a href="/tables" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
-            Edit
-          </a>
-          <a href="/tables" class="font-medium text-red-600 hover:underline dark:text-red-500">
-            Remove
-          </a></TableBodyCell
-        >
-      </TableBodyRow>
-      <TableBodyRow>
-        <TableBodyCell class="!p-4">
-          <Checkbox />
-        </TableBodyCell>
-        <TableBodyCell>Magic Mouse 2</TableBodyCell>
-        <TableBodyCell>Black</TableBodyCell>
-        <TableBodyCell>Accessories</TableBodyCell>
-        <TableBodyCell>Yes</TableBodyCell>
-        <TableBodyCell>No</TableBodyCell>
-        <TableBodyCell>$99</TableBodyCell>
-        <TableBodyCell>0.2 lb.</TableBodyCell>
-        <TableBodyCell
-          ><a href="/tables" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
-            Edit
-          </a>
-          <a href="/tables" class="font-medium text-red-600 hover:underline dark:text-red-500">
-            Remove
-          </a></TableBodyCell
-        >
       </TableBodyRow>
     </TableBody>
   </Table>

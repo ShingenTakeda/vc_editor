@@ -2,7 +2,7 @@
     import { Button, Modal } from 'flowbite-svelte'
     let id = 'size-modal';
     let sizesModal = false;
-    let size = "";
+    let size;
   </script>
   
   <div class="block space-y-4 md:space-y-0 md:space-x-4">

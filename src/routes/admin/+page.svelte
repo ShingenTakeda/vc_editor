@@ -1,10 +1,11 @@
 <!-- Admin page -->
 <script>
 	import Menu from "../Menu.svelte";
-    import { DarkMode } from "flowbite-svelte";
 	import Intent from "./Intent.svelte";
+
+	let showDelete = false;
+	let showEdit = false;
 </script>
 
 <Menu/>
-<DarkMode/>
-<Intent/>
+<Intent showDelete={showDelete} showEdit={showEdit}/>

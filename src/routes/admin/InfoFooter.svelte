@@ -1,5 +1,5 @@
 <script>
-    import { Footer, FooterLinkGroup, FooterLink, FooterBrand, FooterIcon, FooterCopyright } from 'flowbite-svelte'
+    import { Footer, FooterLinkGroup, FooterLink, FooterIcon, FooterCopyright } from 'flowbite-svelte'
   </script>
   
   <Footer footerType="sitemap">
