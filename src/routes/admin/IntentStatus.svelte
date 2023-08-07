@@ -1,6 +1,7 @@
 <script>
 	import { Badge } from 'flowbite-svelte';
+	export let clr = "red";
+	export let msg = "";
 </script>
 
-<Badge large color="green">ATUALIZADO</Badge>
-<Badge large color="red">DESATUALIZADO</Badge>
+<Badge large color={clr} >{msg}</Badge>

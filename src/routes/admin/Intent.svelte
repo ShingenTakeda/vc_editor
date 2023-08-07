@@ -1,6 +1,7 @@
 <script>
   import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox} from 'flowbite-svelte';
 	import BtnGroup from './BtnGroup.svelte';
+	import IntentStatus from './IntentStatus.svelte';
 </script>
   
 <Table>
@@ -37,7 +38,9 @@
         <TableBodyCell></TableBodyCell>
         <TableBodyCell></TableBodyCell>
 
-        <TableBodyCell>3.0 lb.</TableBodyCell>
+        <TableBodyCell>
+          <IntentStatus msg="Hello!" clr="green"/>
+        </TableBodyCell>
         <TableBodyCell>
           <!--Add BtnGroup dynamically-->
           <BtnGroup></BtnGroup>
