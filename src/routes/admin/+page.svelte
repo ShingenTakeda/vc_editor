@@ -12,7 +12,7 @@
     name: 'message',
     label: 'Your message',
     rows: 4,
-    placeholder: 'Leave a comment...',
+    placeholder: 'Escreva a sua resposta',
   };
 
   $: id = ""
@@ -23,16 +23,20 @@
 <Intent/>
 
 <Modal title="Editar" bind:open={$showEdit} size="xl" autoclose>
+  <!--The inside section of this modal shoukd be dynamic-->
+  <Label for="website-admin" class="block mb-2">Perguntas</Label>
   <div class="mb-6">
-    <Label for="website-admin" class="block mb-2">Username</Label>
     <ButtonGroup class="w-full">
       <InputAddon>
-      <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+        <svg class="w-[30px] h-[30px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+          <path d="M17 4h-4V2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2H1a1 1 0 0 0 0 2h1v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1a1 1 0 1 0 0-2ZM7 2h4v2H7V2Zm1 14a1 1 0 1 1-2 0V8a1 1 0 0 1 2 0v8Zm4 0a1 1 0 0 1-2 0V8a1 1 0 0 1 2 0v8Z"/>
+        </svg>
       </InputAddon>
       <Input id="website-admin" placeholder="" />
     </ButtonGroup>
   </div>
   <Button color="blue">Adicionar pergunta do usuario</Button>
+  <Label for="website-admin" class="block mb-2">Respostas</Label>
   <Textarea {...textareaprops} />
   <Button color="blue">Adicionar resposta da Ada</Button>
 </Modal>

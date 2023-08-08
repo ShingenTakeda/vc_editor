@@ -39,7 +39,7 @@
         <TableBodyCell></TableBodyCell>
 
         <TableBodyCell>
-          <IntentStatus msg="Hello!" clr="green"/>
+          <IntentStatus msg="ATUALIZADA" clr="green"/>
         </TableBodyCell>
         <TableBodyCell>
           <!--Add BtnGroup dynamically-->
