@@ -2,9 +2,9 @@
 <script>
 	import { Button, Modal, Textarea, Label, Input, ButtonGroup, InputAddon} from 'flowbite-svelte'
 	import Menu from "../Menu.svelte";
-	import Intent from "./Intent.svelte";
-	import {showEdit, showDelete} from "./stores"
+	import {showEdit, showDelete , intentStore} from "./stores"
 	import NavSearch from './NavSearch.svelte';
+	import IntentList from './IntentList.svelte';
 
   //Placeholder, should be dynamic
   let textareaprops = {
@@ -15,12 +15,55 @@
     placeholder: 'Escreva a sua resposta',
   };
 
-  $: id = ""
+  let testIntents = 
+  [
+    {id: 1, nome: "TRECE.TEST.INTENT1", 
+                                      perguntas: 
+                                      [
+
+                                      ], 
+                                      repostas: 
+                                      [
+
+                                      ],
+                                      status: "ATUALIZADA",
+                                      select: false
+                                      },
+  {id: 2, nome: "TRECE.TEST.INTENT2", 
+                                      perguntas: 
+                                      [
+
+                                      ], 
+                                      repostas: 
+                                      [
+
+                                      ],
+                                      status: "ATUALIZADA",
+                                      select: false
+                                      },
+  {id: 3, nome: "TRECE.TEST.INTENT3", 
+                                      perguntas: 
+                                      [
+
+                                      ], 
+                                      repostas: 
+                                      [
+
+                                      ],
+                                      status: "ATUALIZADA",
+                                      select: false
+                                      }
+  
+  ]
+
+  $intentStore = testIntents
+  
+  console.log($intentStore)
 </script>
 
 <Menu/>
 <NavSearch></NavSearch>
-<Intent/>
+<IntentList/>
 
 <Modal title="Editar" bind:open={$showEdit} size="xl" autoclose>
   <!--The inside section of this modal shoukd be dynamic-->
