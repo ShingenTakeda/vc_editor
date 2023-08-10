@@ -1,7 +1,5 @@
 <script>
   import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox} from 'flowbite-svelte';
-	import BtnGroup from './BtnGroup.svelte';
-	import IntentStatus from './IntentStatus.svelte';
 	import { intentStore } from './stores';
 	import Intent from './Intent.svelte';
 </script>
@@ -22,12 +20,12 @@
       <TableBodyCell></TableBodyCell>
       <TableBodyCell></TableBodyCell>
       <TableHeadCell>Estado da intent</TableHeadCell>
-      <TableHeadCell>Açoes</TableHeadCell>
+      <TableHeadCell>Ações</TableHeadCell>
     </TableHead>
   <TableBody>
 
     {#each [...$intentStore] as intent}
-      <Intent intentName={intent.nome} msg={intent.status} clr="green"/>
+      <Intent intentName={intent.nome} msg={intent.status} id={intent.id} clr="green"/>
     {/each}
 
   </TableBody>

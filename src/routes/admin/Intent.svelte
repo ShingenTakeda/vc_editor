@@ -7,10 +7,11 @@
     export let intentName = "";
     export let msg = ""
     export let clr = ""
+    export let id = 0
 </script>
 
 
-<TableBodyRow>
+<TableBodyRow id={id}>
     <TableBodyCell class="!p-4">
       <Checkbox />
     </TableBodyCell>
@@ -31,6 +32,6 @@
       
     <TableBodyCell>
         <!--Add BtnGroup dynamically-->
-        <BtnGroup></BtnGroup>
+        <BtnGroup id={id}></BtnGroup>
     </TableBodyCell>
 </TableBodyRow>

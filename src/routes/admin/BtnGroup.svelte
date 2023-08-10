@@ -1,19 +1,25 @@
 <script>
     import { ButtonGroup, Button } from 'flowbite-svelte';
-    import { showEdit, showDelete} from "./stores"
+    import { showEdit, showDelete, modalID} from "./stores"
+
+    export let id = 0
 
     function changeEditState()
     {
       showEdit.update((n) => n = !n)
+      $modalID = id
+      console.log($modalID)
     }
 
     function changeDeleteState()
     {
       showDelete.update((n) => n = !n)
+      $modalID = id
+      console.log($modalID)
     }
 </script>
 
-<ButtonGroup>
+<ButtonGroup id={id}>
     
     <Button on:click={changeEditState}>
 
