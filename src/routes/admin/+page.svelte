@@ -64,7 +64,7 @@
 </script>
 
 <Menu/>
-<NavSearch></NavSearch>
+<!-- <NavSearch></NavSearch> -->
 <IntentList/>
 
 <Modal title="Editar" bind:open={$showEdit} size="xl" autoclose>
