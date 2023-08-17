@@ -13,7 +13,7 @@
 
 <TableBodyRow id={id}>
     <TableBodyCell class="!p-4">
-      <Checkbox />
+      <Checkbox class="drop-shadow-md"/>
     </TableBodyCell>
       <TableBodyCell>{intentName}</TableBodyCell>
 

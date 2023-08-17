@@ -8,9 +8,9 @@
 
   //Placeholder, should be dynamic
   let textareaprops = {
-    id: 'message',
-    name: 'message',
-    label: 'Your message',
+    id: 'mensagem',
+    name: 'mensagem',
+    label: 'Resposta',
     rows: 4,
     placeholder: 'Escreva a sua resposta',
   };
