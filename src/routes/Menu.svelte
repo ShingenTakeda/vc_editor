@@ -28,8 +28,9 @@ import ada_icon from "$lib/assets/ada_transparent.png"
     <NavHamburger on:click={toggle} />
   </div>
   <NavUl {hidden}>
-    <NavLi href="/" active={true} color="red">Sair</NavLi>
-    <NavLi href="/about">Sobre</NavLi>
-    <NavLi href="/services">Serviços</NavLi>
+    <!--Colocar dropdown aqui-->
+    <NavLi href="#" active={true} color="red">Sair</NavLi>
+    <NavLi href="#">Sobre</NavLi>
+    <NavLi href="#">Serviços</NavLi>
   </NavUl>
 </Navbar>

@@ -84,7 +84,6 @@
   </div>
   <Button color="blue">Adicionar pergunta do usuario</Button>
   <Label for="website-admin" class="block mb-2">Respostas:</Label>
-  <!-- <Textarea {...textareaprops}> </Textarea> -->
   {#each $intentStore[$modalID].respostas as resposta}
   <div>
     <Textarea {...textareaprops} value={resposta}></Textarea>

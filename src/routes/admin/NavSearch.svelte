@@ -2,7 +2,7 @@
     
   import { Button, Dropdown, DropdownItem, Chevron } from 'flowbite-svelte'
 
-  </script>
+</script>
   
   <div >
     <form>   
