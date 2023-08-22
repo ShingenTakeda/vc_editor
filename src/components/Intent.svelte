@@ -2,7 +2,7 @@
 
 	import { Checkbox, TableBodyCell, TableBodyRow } from "flowbite-svelte";
 	import BtnGroup from "./BtnGroup.svelte";
-    import IntentStatus from "./IntentStatus.svelte";
+  import IntentStatus from "./IntentStatus.svelte";
 
     export let intentName = "";
     export let msg = ""

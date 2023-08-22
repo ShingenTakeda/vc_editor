@@ -1,10 +1,10 @@
 <!-- Admin page -->
 <script>
 	import { Button, Modal, Textarea, Label, Input, ButtonGroup, InputAddon} from 'flowbite-svelte'
-	import Menu from "../Menu.svelte";
+	import Menu from "../../components/Menu.svelte";
 	import {showEdit, showDelete , intentStore, modalID} from "./stores"
-	import NavSearch from './NavSearch.svelte';
-	import IntentList from './IntentList.svelte';
+	import NavSearch from '../../components/NavSearch.svelte';
+	import IntentList from '../../components/IntentList.svelte';
 
   //Placeholder, should be dynamic
   let textareaprops = {
@@ -15,6 +15,7 @@
     placeholder: 'Escreva a sua resposta',
   };
 
+  //Put this in a js script
   let testIntents = 
   [
     {id: 0, nome: "TRECE.TEST.INTENT1", 

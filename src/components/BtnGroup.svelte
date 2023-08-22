@@ -1,6 +1,6 @@
 <script>
     import { ButtonGroup, Button } from 'flowbite-svelte';
-    import { showEdit, showDelete, modalID} from "./stores"
+    import { showEdit, showDelete, modalID} from "../routes/admin/stores"
 
     export let id = 0
 

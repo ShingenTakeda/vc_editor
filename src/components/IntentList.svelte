@@ -1,6 +1,6 @@
 <script>
   import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox} from 'flowbite-svelte';
-	import { intentStore } from './stores';
+	import { intentStore } from '../routes/admin/stores';
 	import Intent from './Intent.svelte';
 </script>
   

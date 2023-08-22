@@ -1,2 +1,0 @@
-# COMMAND
-npm run build
